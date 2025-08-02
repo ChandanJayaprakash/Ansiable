@@ -1,5 +1,5 @@
 ---
-- host: all
+- host: 
   become: true
   tasks:
     - name: Install apache httpd
@@ -14,3 +14,14 @@
         owner: root
         group: root
         mode: '0644'
+        
+    - name: Ensure Apache2 is started
+        service:
+          name: apache2
+          state: started
+  
+  
+      
+
+    
+   
